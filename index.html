@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LINEUP by MATCHANALYSTLAB</title>
+  <link rel="icon" type="image/png" href="assets/matchanalystlab-icon.png" />
+<link rel="stylesheet" href="style.css?v=segnala-bug-sotto-aggiornamenti-20260809" />
+  <link rel="stylesheet" href="overrides.css?v=minuto-separato-icona-20260729" />
+<link rel="stylesheet" href="event-overrides.css?v=icone-titolari-in-colonna-20260805" />
+<link rel="stylesheet" href="events-tables.css?v=tabelle-progetto-piu-grandi-20260811" />
+<link rel="stylesheet" href="referee-icon.css?v=icone-ufficiali-allineate-20260730" />
+<link rel="stylesheet" href="field-substitutions.css?v=icone-entranti-riga-orizzontale-20260806" />
+<link rel="stylesheet" href="action-icons.css?v=testo-sotto-icone-eventi-20260730" />
+<link rel="stylesheet" href="shot-stats.css?v=tabelle-progetto-piu-grandi-20260811" />
+<link rel="stylesheet" href="period-stats.css?v=tabelle-progetto-piu-grandi-20260811" />
+<link rel="stylesheet" href="period-possession-chart.css?v=linee-possesso-continue-20260807" />
+<link rel="stylesheet" href="lineup-selector.css?v=campi-squadre-menu-lineup-20260809" />
+<link rel="stylesheet" href="extra-shirt-styles.css?v=nuovi-stili-maglia-20260808" />
+<link rel="stylesheet" href="player-list-flags.css?v=casella-under-due-cifre-20260809" />
+<link rel="stylesheet" href="brand-logo.css?v=nuova-partita-una-riga-20260809" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-utility-buttons"><button class="check-updates-button" id="checkUpdatesBtn" type="button">Verifica aggiornamenti</button><button class="bug-report-button" id="bugReportBtn" type="button">Segnala bug</button></div>
+    <div class="brand"><img class="brand-logo" src="assets/matchanalystlab-icon.png" alt="Logo MatchAnalystLab" /> LINEUP by MATCHANALYSTLAB</div>
+    <div class="match-title-group"><span class="match-title-help">INSERISCI NOME:</span><div class="match-title" contenteditable="true" spellcheck="false" title="Clicca per modificare il titolo">Nuova partita</div></div>
+    <div class="top-actions"><details id="lineupSelector" class="lineup-selector"><summary>SEL. LINEUP</summary><div class="lineup-options"><button type="button" data-lineup-choice="both">Team 1 e Team 2</button><button type="button" data-lineup-choice="home">Solo Team 1</button><button type="button" data-lineup-choice="away">Solo Team 2</button></div></details><button class="top-button save-project-button" id="saveProjectBtn">Salva progetto<span class="save-project-icon" aria-hidden="true">💾</span></button><button class="top-button save-project-button" id="openProjectBtn">Apri progetto<span class="save-project-icon" aria-hidden="true">📂</span></button><button class="top-button image-export-removed" id="imageBtn" aria-hidden="true" tabindex="-1">Crea immagine</button><button class="top-button save-project-button" id="jpgBtn">Scarica JPG<span class="save-project-icon" aria-hidden="true">🖼️</span></button><button class="top-button save-project-button" id="pdfBtn">PDF completo<span class="save-project-icon" aria-hidden="true">📄</span></button><button class="top-button save-project-button" id="simplePdfBtn">PDF semplificato<span class="save-project-icon" aria-hidden="true">📄</span></button></div>
+  </header>
+  <main class="layout">
+    <aside class="team-panel" id="homePanel"></aside>
+    <section class="workspace">
+      <section class="scoreboard">
+        <details class="competition-title"><summary>Competizione</summary><div class="competition-options"><button type="button" class="create-competition-option">Nuova competizione</button></div></details>
+        <div class="match-details">
+          <div><span class="match-day" contenteditable="true" spellcheck="false">1 GIORNATA - ANDATA</span><span class="match-date" contenteditable="true" spellcheck="false" tabindex="0">Domenica 27 Luglio 2026 ore 16:00</span></div>
+          <div id="venueField">Campo Sportivo <span class="venue-value-fixed" contenteditable="true" spellcheck="false">xxx - xxx (xx)</span></div>
+        </div>
+        <div class="team-score home"><span class="score-badge" id="homeBadge"></span><input id="homeName" value="Team 1" autocomplete="off" aria-label="Nome squadra 1"><span class="score-actions"><button data-score="home" data-change="-1">−</button><b id="homeScore">0</b><button data-score="home" data-change="1">+</button></span></div>
+        <div class="clock-block"><button id="playBtn" class="play">▶</button><span id="clock">00:00</span><select id="period"><option>1° Tempo</option><option>2° Tempo</option><option>Supplementari</option></select></div>
+        <div class="team-score away"><span class="score-actions"><button data-score="away" data-change="-1">−</button><b id="awayScore">0</b><button data-score="away" data-change="1">+</button></span><input id="awayName" value="Team 2" autocomplete="off" aria-label="Nome squadra 2"><span class="score-badge blue" id="awayBadge"></span></div>
+      </section>
+      <nav class="toolbar" aria-label="Strumenti lavagna">
+        <button class="active" data-tool="select" title="Sposta giocatori">↖</button><button data-tool="draw" title="Disegna frecce">✎</button><button data-tool="erase" title="Cancella disegni">⌫</button><span></span>
+        <button id="addHome" title="Aggiungi giocatore Team 1">+ 1</button><button id="addAway" title="Aggiungi giocatore Team 2">+ 2</button><button id="resetBoard" title="Ripristina">↺</button>
+      </nav>
+      <div class="pitch-wrap" id="pitchWrap">
+        <svg class="pitch" viewBox="0 0 1000 650" aria-label="Campo da calcio">
+          <defs><pattern id="grass" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="#259c59"/><rect width="40" height="80" fill="#209451"/></pattern></defs>
+          <rect x="4" y="4" width="992" height="642" rx="4" fill="url(#grass)" stroke="white" stroke-width="5"/>
+          <line x1="500" y1="4" x2="500" y2="646" stroke="white" stroke-width="4"/><circle cx="500" cy="325" r="85" fill="none" stroke="white" stroke-width="4"/><circle cx="500" cy="325" r="6" fill="white"/>
+          <rect x="4" y="145" width="145" height="360" fill="none" stroke="white" stroke-width="4"/><rect x="4" y="220" width="55" height="210" fill="none" stroke="white" stroke-width="4"/><circle cx="105" cy="325" r="5" fill="white"/>
+          <path d="M149 265 A85 85 0 0 1 149 385" fill="none" stroke="white" stroke-width="4"/>
+          <rect x="851" y="145" width="145" height="360" fill="none" stroke="white" stroke-width="4"/><rect x="941" y="220" width="55" height="210" fill="none" stroke="white" stroke-width="4"/><circle cx="895" cy="325" r="5" fill="white"/>
+          <path d="M851 265 A85 85 0 0 0 851 385" fill="none" stroke="white" stroke-width="4"/>
+          <g fill="none" stroke="white" stroke-width="4"><path d="M4 35 A31 31 0 0 0 35 4"/><path d="M965 4 A31 31 0 0 0 996 35"/><path d="M4 615 A31 31 0 0 1 35 646"/><path d="M965 646 A31 31 0 0 1 996 615"/></g>
+        </svg>
+        <svg id="drawing" viewBox="0 0 1000 650" preserveAspectRatio="none"></svg>
+        <div id="players" aria-label="Giocatori sul campo"></div>
+      </div>
+      <p class="hint">Trascina i giocatori sul campo. Usa la matita per disegnare movimenti e passaggi.</p>
+    </section>
+    <aside class="team-panel" id="awayPanel"></aside>
+  </main>
+<script src="app.js?v=posizioni-team2-5-6-7-8-10-11-20260809"></script>
+<script src="under-year-swap.js?v=anno-under-entrante-metadati-20260809"></script>
+<script src="event-render.js?v=cartellini-multipli-r3-20260809"></script>
+<script src="shirt-overrides.js?v=tinta-unita-colore2-20260808"></script>
+<script src="events-tables.js?v=cartellini-multipli-r3-20260809"></script>
+<script src="shot-stats.js?v=colori-grafici-maglie-20260805"></script>
+<script src="pass-stats.js?v=colori-grafici-maglie-20260805"></script>
+<script src="possession-stats.js?v=loghi-centrati-torta-20260807"></script>
+<script src="idp-stats.js?v=colori-grafici-maglie-20260805"></script>
+<script src="ipo-stats.js?v=colori-grafici-maglie-20260805"></script>
+<script src="ball-stats.js?v=gestione-palle-20260805"></script>
+<script src="match-actions-stats.js?v=azioni-partita-20260805"></script>
+<script src="period-stats.js?v=quadrati-colore-squadre-20260809"></script>
+<script src="period-possession-chart.js?v=solo-intervalli-minuti-20260809"></script>
+<script src="event-minute-picker.js?v=minuto-per-ogni-evento-20260805"></script>
+<script src="assist-rigore.js?v=rigore-in-colonna-assist-20260805"></script>
+<script src="yellow-card-reason.js?v=motivo-cartellini-sempre-visibile-20260805"></script>
+<script src="field-substitutions.js?v=icone-entrante-coordinate-20260806"></script>
+<script src="field-event-columns.js?v=icone-vicine-maglia-20260805"></script>
+<script src="project-save.js?v=salva-solo-pagina-aggiornata-20260808"></script>
+<script src="project-download.js?v=zip-con-apri-progetto-20260808"></script>
+<script src="official-icons-data.js?v=icone-originali-jpg-20260806"></script>
+<script src="pdf-export.js?v=pdf-e-jpg-pagina-piena-20260811"></script>
+<script src="referee-icon.js?v=ufficiali-completi-file-scaricato-20260730"></script>
+<script src="minute-recovery.js?v=minuto-cambi-corretto-20260806"></script>
+<script src="custom-competition.js?v=solo-nuova-competizione-20260809"></script>
+<script src="season-editable.js?v=stagione-modificabile-20260806"></script>
+<script src="lineup-selector.js?v=lineup-campo-completo-20260807"></script>
+<script src="extra-shirt-styles.js?v=tutti-stili-maglia-funzionanti-20260808"></script>
+  <script src="project-open.js?v=apertura-file-affidabile-20260808"></script>
+  <script src="player-list-flags.js?v=anno-under-solo-cifre-20260809"></script>
+  <script src="match-title-clear.js?v=nuova-partita-ripristino-20260809"></script>
+  <script src="clear-on-edit.js?v=giornata-vuota-data-centrata-20260809"></script>
+  <script src="update-check.js?v=github-releases-20260809"></script>
+  <script src="bug-report.js?v=segnala-bug-email-20260809"></script>
+  <script src="reset-project.js?v=ripulisci-doppie-frecce-verdi-20260809"></script>
+  <script src="pdf-icons.js?v=icone-adobe-acrobat-20260809"></script>
+</body>
+</html>

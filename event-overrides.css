@@ -1,0 +1,41 @@
+.player-row{position:relative!important;padding-right:4px!important}
+.player-row .player-event{position:static!important;transform:none!important;display:flex!important;gap:6px!important;max-width:none!important;justify-content:flex-end!important;margin-left:4px!important;z-index:4!important}
+.player-row .player-event-entry{display:inline-flex!important;align-items:center!important;gap:3px!important;white-space:nowrap!important}
+.player-row .player-event-entry small{display:inline-block!important;color:#ffdf00!important;font-size:12px!important;font-weight:900!important;visibility:visible!important;opacity:1!important}
+.player-row .delete{position:static!important;transform:none!important;margin-left:auto!important;z-index:5!important}
+.player-row .swap-marker[data-minute]::after{content:attr(data-minute) "'";display:inline-block!important;margin-left:4px!important;color:#ffdf00!important;font-size:12px!important;font-weight:900!important}
+.player-row .player-event-entry.exit b{color:#ef4444!important;transform:none!important}
+.player-row .player-event-entry.enter b{color:#15803d!important;transform:rotate(180deg)!important}
+.field-event.field-event-outside{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;min-width:19px!important;width:19px!important;margin-top:-26px!important}
+.field-event.field-event-outside span{display:block!important;width:19px!important;height:19px!important;line-height:19px!important;text-align:center!important}
+.field-event.field-event-outside span.exit{color:#ef4444!important;transform:none!important}
+.field-event.field-event-outside span.enter{color:#15803d!important;transform:rotate(180deg)!important}
+.field-action-team button::after,.field-action-team .swap-arrows::after{content:none!important;display:none!important}
+.field-action-team button{width:42px!important;height:38px!important;padding:0!important}
+
+/* Elenco giocatori più leggibile */
+.team-panel .player-row{min-height:32px!important;padding:4px 6px!important;font-size:12px!important;line-height:16px!important}
+.team-panel .number{width:19px!important;font-size:13px!important}
+.team-panel .name-surname-fields{gap:5px!important}
+.team-panel .name-surname-fields input{padding:5px 6px!important;font-size:12px!important}
+.team-panel .player-event{font-size:15px!important}
+.team-panel .player-event-entry small,.team-panel .visible-minute-label{font-size:11px!important}
+.team-panel .delete{font-size:15px!important}
+.team-panel .swap-marker::before{font-size:18px!important}
+
+#downloadProjectDialog{position:fixed;inset:0;z-index:1000;display:none;place-items:center;background:#020b12bb;padding:18px}
+#downloadProjectDialog.open{display:grid}
+.download-project-card{width:min(360px,100%);padding:22px;border:1px solid #477489;border-radius:12px;background:#102b3b;box-shadow:0 18px 45px #0009}
+.download-project-card h2{margin:0 0 16px;color:#fff;font-size:19px}
+.download-project-card label{display:grid;gap:7px;color:#dce8ed;font-size:13px;font-weight:700}
+.download-project-name{padding:10px;border:1px solid #477489;border-radius:6px;background:#17394c;color:#fff;font:inherit;outline:none}
+.download-project-note{margin:12px 0 0;color:#b8cad3;font-size:12px;line-height:1.4}
+.download-project-card>div:last-child{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+.download-project-card button{border:1px solid #477489;border-radius:6px;padding:8px 12px;color:#fff;background:#244558;font-weight:800;cursor:pointer}
+.download-project-card .download-project-confirm{background:#258cf5;border-color:#65baff}
+
+/* Numeri più leggibili sulle maglie nel campo */
+.pitch-wrap .token{font-size:19px!important;padding-top:4px!important}
+
+/* Eventi dei titolari in colonna, accanto alla maglia */
+.field-event.field-event-outside{flex-direction:column!important;width:auto!important;min-width:0!important;margin-top:0!important;gap:2px!important;transform:translate(-50%,-50%)!important}

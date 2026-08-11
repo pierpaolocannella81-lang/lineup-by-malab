@@ -1,0 +1,5 @@
+.field-substitute{position:absolute;z-index:5;transform:translate(-50%,-50%);width:90px;height:0;overflow:visible;white-space:nowrap;color:#111;font-size:9px;font-weight:800;text-align:center;text-shadow:0 1px 2px #ffffff99;pointer-events:none}
+.field-substitute>span:first-child{position:absolute;top:0;left:0;width:100%;transform:translateY(-50%)}
+.field-substitute-enter{position:absolute;top:5px;left:0;width:100%;color:#15803d;font-size:18px;line-height:16px;font-weight:900;text-shadow:-1px 0 #fff,0 1px #fff,1px 0 #fff,0 -1px #fff}
+.field-substitute-icons{position:absolute;top:22px;left:50%;width:max-content!important;display:grid!important;grid-auto-flow:column!important;grid-auto-columns:max-content!important;align-items:center;justify-content:center;gap:5px;font-size:13px;line-height:13px;white-space:nowrap;transform:translateX(-50%)}
+.field-substitute-icons b{display:inline-flex!important;flex:0 0 auto;font:inherit}

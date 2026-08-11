@@ -1,0 +1,45 @@
+{
+  "name": "lineup-by-malab",
+  "version": "1.0.3",
+  "description": "LineUp by MALab",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "mac": "electron-builder --mac dmg zip",
+    "windows": "electron-builder --win nsis portable"
+  },
+  "build": {
+    "appId": "it.matchanalystlab.lineup",
+    "productName": "LineUp by MALab",
+    "files": [
+      "**/*",
+      "!dist{,/**}",
+      "!node_modules{,/**}/.cache"
+    ],
+    "mac": {
+      "category": "public.app-category.sports",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "LineUp by MALab"
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.12"
+  }
+}

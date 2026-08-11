@@ -1,0 +1,7 @@
+.field-actions .field-action-team button{width:58px!important;height:52px!important;padding-bottom:12px!important;position:relative!important}
+.field-actions .field-action-team button::after,.field-actions .field-action-team .swap-arrows::after{display:block!important;visibility:visible!important;position:absolute!important;bottom:5px!important;left:0!important;width:100%!important;margin:0!important;color:#dce8ed!important;font-size:8px!important;line-height:1!important;white-space:nowrap!important}
+.field-actions .field-action-team button:nth-child(2)::after{content:'Assist'!important}
+.field-actions .field-action-team button:nth-child(3)::after{content:'Gol'!important}
+.field-actions .field-action-team button:nth-child(4)::after{content:'Ammonito'!important}
+.field-actions .field-action-team button:nth-child(5)::after{content:'Espulso'!important}
+.field-actions .field-action-team .swap-arrows::after{content:'Cambio'!important}

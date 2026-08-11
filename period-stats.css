@@ -1,0 +1,23 @@
+#periodStatsTable,#periodStatsAwayTable{grid-column:auto;order:20;justify-self:stretch;width:100%;overflow:hidden;border:1px solid #31596d;border-radius:7px;background:#102b3b;color:#fff}
+#periodStatsSharedTitle{grid-column:1/-1;order:19;display:grid;grid-template-columns:52px 1fr 52px;align-items:center;min-height:40px;padding:3px 9px;border:1px solid #31596d;border-radius:7px 7px 0 0;background:#17394c;color:#fff}
+#periodStatsSharedTitle h3{margin:0;text-align:center;font-size:12px}
+#periodStatsSharedTitle .period-team-marker{display:flex;align-items:center;gap:4px;justify-content:center}#periodStatsSharedTitle .period-shared-logo{width:32px;height:32px;object-fit:contain}#periodStatsSharedTitle .period-team-color{width:11px;height:11px;flex:0 0 11px;border:1px solid #fff;border-radius:2px}
+#periodStatsTable h3,#periodStatsAwayTable h3,#periodStatsTable .period-logo-row,#periodStatsAwayTable .period-logo-row{display:none}
+.period-stats-scroll{overflow:hidden}
+#periodStatsTable table,#periodStatsAwayTable table{width:100%;min-width:0;table-layout:fixed;border-collapse:collapse;font-size:7px}
+#periodStatsTable th,#periodStatsTable td,#periodStatsAwayTable th,#periodStatsAwayTable td{padding:2px 0;border-bottom:1px solid #284c5f;text-align:center;white-space:nowrap;overflow:hidden}
+#periodStatsTable thead th,#periodStatsAwayTable thead th{background:#102b3b;color:#a8bdc9;font-size:6px;text-transform:uppercase}
+#periodStatsTable tbody th,#periodStatsAwayTable tbody th{text-align:left;background:#17394c;color:#fff;font-size:8px}
+#periodStatsTable .period-separator,#periodStatsAwayTable .period-separator{width:4px;min-width:4px;padding:0;background:#092130;border-right:1px solid #31596d;border-left:1px solid #31596d}
+#periodStatsTable .period-gap,#periodStatsAwayTable .period-gap{background:#d9e0e4;border-color:#aebcc4}
+#periodStatsTable input,#periodStatsAwayTable input{width:21px;max-width:94%;padding:2px 0;border:1px solid #477489;border-radius:3px;background:#17394c;color:#fff;text-align:center;font-size:8px}
+#periodStatsAwayTable input[readonly]{background:#0e2939;color:#a8bdc9;cursor:default}
+#periodStatsTable input[type="number"],#periodStatsAwayTable input[type="number"]{-moz-appearance:textfield;appearance:textfield}
+#periodStatsTable input[type="number"]::-webkit-outer-spin-button,#periodStatsTable input[type="number"]::-webkit-inner-spin-button,#periodStatsAwayTable input[type="number"]::-webkit-outer-spin-button,#periodStatsAwayTable input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+#periodStatsTable .period-calculated,#periodStatsAwayTable .period-calculated{color:#55d990;font-weight:900;font-size:9px}
+#periodStatsTable .period-spacer td,#periodStatsAwayTable .period-spacer td{height:5px;padding:0;background:#d9e0e4;border-bottom:1px solid #aebcc4}
+#periodStatsTable tr[data-period="8"]>*,#periodStatsTable tr[data-period="12"]>*,#periodStatsAwayTable tr[data-period="8"]>*,#periodStatsAwayTable tr[data-period="12"]>*{border-bottom:3px solid #8ba0aa}
+#periodStatsTable th:nth-child(3),#periodStatsTable td:nth-child(3),#periodStatsTable th:nth-child(7),#periodStatsTable td:nth-child(7),#periodStatsTable th:nth-child(11),#periodStatsTable td:nth-child(11),#periodStatsAwayTable th:nth-child(3),#periodStatsAwayTable td:nth-child(3),#periodStatsAwayTable th:nth-child(7),#periodStatsAwayTable td:nth-child(7),#periodStatsAwayTable th:nth-child(11),#periodStatsAwayTable td:nth-child(11){width:4px}
+
+/* Tabelle per periodi più leggibili nella schermata del progetto. */
+#periodStatsSharedTitle{min-height:46px;padding:5px 10px}#periodStatsSharedTitle h3{font-size:14px}#periodStatsSharedTitle .period-shared-logo{width:36px;height:36px}#periodStatsTable table,#periodStatsAwayTable table{font-size:8px}#periodStatsTable th,#periodStatsTable td,#periodStatsAwayTable th,#periodStatsAwayTable td{padding:3px 0}#periodStatsTable thead th,#periodStatsAwayTable thead th{font-size:7px}#periodStatsTable tbody th,#periodStatsAwayTable tbody th{font-size:9px}#periodStatsTable input,#periodStatsAwayTable input{width:23px;padding:3px 0;font-size:9px}#periodStatsTable .period-calculated,#periodStatsAwayTable .period-calculated{font-size:10px}

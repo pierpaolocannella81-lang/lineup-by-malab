@@ -1,0 +1,46 @@
+#teamEventTables{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.team-events-card{overflow:hidden;border:1px solid #31596d;border-radius:9px;background:#102b3b}
+.team-events-card h3{margin:0;padding:9px 11px;background:#17394c;color:#fff;font-size:13px}
+.team-events-card .team-events-header{height:102px;display:flex;align-items:center;justify-content:center;padding:7px}
+.team-events-header img{width:88px!important;height:88px!important;max-width:none!important;object-fit:contain;display:block}
+.event-type-tables{display:grid;grid-template-columns:1fr;gap:8px;padding:8px}
+.event-type-table{overflow:hidden;border:1px solid #284c5f;border-radius:6px}
+.event-type-table h4{margin:0;padding:6px 7px;background:#1a394b;font-size:10px}
+.team-events-card table{width:100%;border-collapse:collapse;font-size:10px}
+.team-events-card th,.team-events-card td{padding:7px 8px;border-bottom:1px solid #284c5f;text-align:left}
+.team-events-card th{color:#a8bdc9;font-size:10px;text-transform:uppercase}
+.team-events-card tr:last-child td{border-bottom:0}
+.team-events-card td:nth-child(1){width:42px;color:#ffdf00;font-weight:900}
+.team-events-card td:nth-child(2){width:28px;font-size:15px}
+.goal-player-cell,.assist-player-cell{font-size:10px!important;line-height:1.2!important}
+.goal-assist-table table{table-layout:fixed}
+.goal-assist-table th:first-child,.goal-assist-table td:first-child{width:42px}
+.goal-assist-table th:nth-child(2),.goal-assist-table td:nth-child(2),.goal-assist-table th:nth-child(3),.goal-assist-table td:nth-child(3){width:calc((100% - 42px)/2)!important;font-size:10px!important}
+.change-table table{table-layout:fixed}
+.change-table th:first-child,.change-table td:first-child{width:42px}
+.change-table th:nth-child(2),.change-table td:nth-child(2),.change-table th:nth-child(3),.change-table td:nth-child(3){width:calc((100% - 42px)/2)!important;font-size:10px!important}
+.team-events-card .no-events{text-align:center;color:#a8bdc9}
+.event-table-delete{float:right;border:0;background:transparent;color:#ff5b75;font-size:18px;line-height:12px;font-weight:900;cursor:pointer;padding:0 1px;margin-left:5px}
+.event-table-delete:hover{color:#ff9aaa;transform:scale(1.15)}
+.card-reasons-legend{grid-column:1/-1;padding:10px 14px;border:1px solid #31596d;border-radius:8px;background:#102b3b;color:#fff;text-align:center;font-size:12px;line-height:1.5}
+.card-reasons-legend b{color:#ffdf00}
+@media(max-width:720px){#teamEventTables{grid-template-columns:1fr}}
+@media(max-width:720px){.event-type-tables{grid-template-columns:1fr}}
+
+/* Tabelle nel progetto: testi, righe e icone più leggibili. */
+#teamEventTables{gap:18px;margin-top:22px}
+.team-events-card h3{padding:11px 13px;font-size:15px}
+.team-events-card .team-events-header{height:112px;padding:9px}
+.team-events-header img{width:96px!important;height:96px!important}
+.event-type-tables{gap:11px;padding:10px}
+.event-type-table h4{padding:8px 9px;font-size:12px}
+.team-events-card table{font-size:12px}
+.team-events-card th,.team-events-card td{padding:9px 10px}
+.team-events-card th{font-size:11px}
+.team-events-card td:nth-child(1){width:50px}
+.team-events-card td:nth-child(2){width:34px;font-size:18px}
+.goal-player-cell,.assist-player-cell{font-size:12px!important;line-height:1.25!important}
+.goal-assist-table th:first-child,.goal-assist-table td:first-child,.change-table th:first-child,.change-table td:first-child{width:50px}
+.goal-assist-table th:nth-child(2),.goal-assist-table td:nth-child(2),.goal-assist-table th:nth-child(3),.goal-assist-table td:nth-child(3),.change-table th:nth-child(2),.change-table td:nth-child(2),.change-table th:nth-child(3),.change-table td:nth-child(3){width:calc((100% - 50px)/2)!important;font-size:12px!important}
+.event-table-delete{font-size:21px}
+.card-reasons-legend{padding:12px 16px;font-size:13px}

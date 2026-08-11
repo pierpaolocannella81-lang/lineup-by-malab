@@ -1,0 +1,4 @@
+#periodPossessionChart{grid-column:1/-1;order:21;margin-top:-14px;padding:8px 10px;border:1px solid #31596d;border-radius:0 0 7px 7px;background:#102b3b;color:#fff}
+#periodPossessionChart h3{margin:0;text-align:center;font-size:12px}
+.period-chart-legend{display:flex;justify-content:center;gap:20px;margin:6px 0 2px;font-size:10px}.period-chart-legend span{display:flex;align-items:center;gap:5px}.period-chart-legend i{display:inline-block;width:18px;height:3px;border-radius:2px}
+#periodPossessionChart svg{display:block;width:100%;height:auto;overflow:visible}.period-chart-grid line{stroke:#426475;stroke-width:1}.period-chart-grid text,.period-chart-labels text{fill:#a8bdc9;font-size:10px}.period-possession-line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
