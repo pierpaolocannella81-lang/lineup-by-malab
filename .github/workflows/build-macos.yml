@@ -1,0 +1,35 @@
+ame: Crea app macOS
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Scarica il progetto
+        uses: actions/checkout@v4
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installa le dipendenze
+        run: npm ci
+
+      - name: Crea app per Mac
+        run: npm run mac
+
+      - name: Conserva i file per Mac
+        uses: actions/upload-artifact@v4
+        with:
+          name: LineUp-by-MALab-macOS
+          path: |
+            dist/*.dmg
+            dist/*.zip
+          if-no-files-found: error
