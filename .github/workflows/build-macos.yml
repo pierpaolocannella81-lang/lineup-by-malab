@@ -1,4 +1,4 @@
-ame: Crea app macOS
+name: Crea app macOS
 
 on:
   workflow_dispatch:
